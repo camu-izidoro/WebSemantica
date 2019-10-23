@@ -1,0 +1,289 @@
+@prefix : <http://www.semanticweb.org/camil/ontologies/2019/9/Ontology1571791881844.owl#> .
+@prefix owl2xml: <http://www.w3.org/2006/12/owl2-xml#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix C: <http://www.semanticweb.org/camil/ontologies/2019/9/Ontology1571791881844.owl#C&> .
+@prefix Entrada: <http://www.semanticweb.org/camil/ontologies/2019/9/Ontology1571791881844.owl#Entrada/> .
+@prefix Ontology1571791881844: <http://www.semanticweb.org/camil/ontologies/2019/9/Ontology1571791881844.owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@base <http://www.semanticweb.org/camil/ontologies/2019/9/Ontology1571791881844.owl> .
+
+<http://www.semanticweb.org/camil/ontologies/2019/9/Ontology1571791881844.owl> rdf:type owl:Ontology .
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/camil/ontologies/2019/9/Ontology1571791881844.owl#PertenceAo
+
+:PertenceAo rdf:type owl:ObjectProperty ;
+            
+            rdfs:domain :Andar ;
+            
+            rdfs:range :Loja .
+
+
+
+
+
+#################################################################
+#
+#    Data properties
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/camil/ontologies/2019/9/Ontology1571791881844.owl#Login
+
+:Login rdf:type owl:DatatypeProperty ;
+       
+       rdfs:domain :Cliente ;
+       
+       rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/camil/ontologies/2019/9/Ontology1571791881844.owl#Nome
+
+:Nome rdf:type owl:DatatypeProperty ;
+      
+      rdfs:domain :Cliente ;
+      
+      rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/camil/ontologies/2019/9/Ontology1571791881844.owl#Senha
+
+:Senha rdf:type owl:DatatypeProperty ;
+       
+       rdfs:domain :Cliente ;
+       
+       rdfs:range xsd:string .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/camil/ontologies/2019/9/Ontology1571791881844.owl#Agente
+
+:Agente rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/camil/ontologies/2019/9/Ontology1571791881844.owl#Andar
+
+:Andar rdf:type owl:Class ;
+       
+       rdfs:subClassOf :Espaços .
+
+
+
+###  http://www.semanticweb.org/camil/ontologies/2019/9/Ontology1571791881844.owl#Banheiro
+
+:Banheiro rdf:type owl:Class ;
+          
+          rdfs:subClassOf :Lugar .
+
+
+
+###  http://www.semanticweb.org/camil/ontologies/2019/9/Ontology1571791881844.owl#Carrinho
+
+:Carrinho rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/camil/ontologies/2019/9/Ontology1571791881844.owl#Cliente
+
+:Cliente rdf:type owl:Class ;
+         
+         rdfs:subClassOf :Agente .
+
+
+
+###  http://www.semanticweb.org/camil/ontologies/2019/9/Ontology1571791881844.owl#Corredor
+
+:Corredor rdf:type owl:Class ;
+          
+          rdfs:subClassOf :Passagem_Horizontal .
+
+
+
+###  http://www.semanticweb.org/camil/ontologies/2019/9/Ontology1571791881844.owl#Edificio
+
+:Edificio rdf:type owl:Class ;
+          
+          rdfs:subClassOf :Espaços .
+
+
+
+###  http://www.semanticweb.org/camil/ontologies/2019/9/Ontology1571791881844.owl#Elevador
+
+:Elevador rdf:type owl:Class ;
+          
+          rdfs:subClassOf :Passagem_Vertical .
+
+
+
+###  http://www.semanticweb.org/camil/ontologies/2019/9/Ontology1571791881844.owl#Entrada
+
+:Entrada rdf:type owl:Class ;
+         
+         rdfs:subClassOf :Portal .
+
+
+
+###  http://www.semanticweb.org/camil/ontologies/2019/9/Ontology1571791881844.owl#Entrada/Saida
+
+Entrada:Saida rdf:type owl:Class ;
+              
+              rdfs:subClassOf :Portal .
+
+
+
+###  http://www.semanticweb.org/camil/ontologies/2019/9/Ontology1571791881844.owl#Escada
+
+:Escada rdf:type owl:Class ;
+        
+        rdfs:subClassOf :Passagem_Vertical .
+
+
+
+###  http://www.semanticweb.org/camil/ontologies/2019/9/Ontology1571791881844.owl#Escada_Rolante
+
+:Escada_Rolante rdf:type owl:Class ;
+                
+                rdfs:subClassOf :Passagem_Vertical .
+
+
+
+###  http://www.semanticweb.org/camil/ontologies/2019/9/Ontology1571791881844.owl#Espaços
+
+:Espaços rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/camil/ontologies/2019/9/Ontology1571791881844.owl#Esteira
+
+:Esteira rdf:type owl:Class ;
+         
+         rdfs:subClassOf :Passagem_Horizontal .
+
+
+
+###  http://www.semanticweb.org/camil/ontologies/2019/9/Ontology1571791881844.owl#Loja
+
+:Loja rdf:type owl:Class ;
+      
+      rdfs:subClassOf :Lugar .
+
+
+
+###  http://www.semanticweb.org/camil/ontologies/2019/9/Ontology1571791881844.owl#Lugar
+
+:Lugar rdf:type owl:Class ;
+       
+       rdfs:subClassOf :Espaços .
+
+
+
+###  http://www.semanticweb.org/camil/ontologies/2019/9/Ontology1571791881844.owl#Particao
+
+:Particao rdf:type owl:Class ;
+          
+          rdfs:subClassOf :Lugar .
+
+
+
+###  http://www.semanticweb.org/camil/ontologies/2019/9/Ontology1571791881844.owl#Passagem
+
+:Passagem rdf:type owl:Class ;
+          
+          rdfs:subClassOf :Espaços .
+
+
+
+###  http://www.semanticweb.org/camil/ontologies/2019/9/Ontology1571791881844.owl#Passagem_Horizontal
+
+:Passagem_Horizontal rdf:type owl:Class ;
+                     
+                     rdfs:subClassOf :Passagem .
+
+
+
+###  http://www.semanticweb.org/camil/ontologies/2019/9/Ontology1571791881844.owl#Passagem_Vertical
+
+:Passagem_Vertical rdf:type owl:Class ;
+                   
+                   rdfs:subClassOf :Passagem .
+
+
+
+###  http://www.semanticweb.org/camil/ontologies/2019/9/Ontology1571791881844.owl#Portal
+
+:Portal rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/camil/ontologies/2019/9/Ontology1571791881844.owl#Produto
+
+:Produto rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/camil/ontologies/2019/9/Ontology1571791881844.owl#Rampa
+
+:Rampa rdf:type owl:Class ;
+       
+       rdfs:subClassOf :Passagem_Horizontal .
+
+
+
+###  http://www.semanticweb.org/camil/ontologies/2019/9/Ontology1571791881844.owl#Saida
+
+:Saida rdf:type owl:Class ;
+       
+       rdfs:subClassOf :Portal .
+
+
+
+
+
+#################################################################
+#
+#    Individuals
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/camil/ontologies/2019/9/Ontology1571791881844.owl#C&A
+
+C:A rdf:type :Loja ,
+             owl:Thing ;
+    
+    :PertenceAo :Piso1 .
+
+
+
+###  http://www.semanticweb.org/camil/ontologies/2019/9/Ontology1571791881844.owl#Piso1
+
+:Piso1 rdf:type :Andar ,
+                owl:Thing .
+
+
+
+
+###  Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net
+
